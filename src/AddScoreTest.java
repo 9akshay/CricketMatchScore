@@ -16,4 +16,12 @@ public class AddScoreTest {
 		assertEquals(3, score.getCurrentScore());
 	}
 
+	public void test2Fail() {
+		matchInn1 = new CricketMatchInning("IND","ENG",5);
+		score = new Scores(matchInn1);
+		score.addScore(1);
+		score.addScore(2);
+		score.addScore(2);
+		assertEquals(3, score.getCurrentScore());
+	}
 }

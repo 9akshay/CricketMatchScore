@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ScoreAtBall {
+public class ScoreAtBallTest {
 
 	CricketMatchInning matchInn1;
 	Scores score;
