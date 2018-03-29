@@ -1,5 +1,6 @@
 
 public class Scores {
+	
 	private CricketMatch match;
 	private int totalScore=0;
 
