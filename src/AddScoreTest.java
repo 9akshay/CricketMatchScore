@@ -15,7 +15,8 @@ public class AddScoreTest {
 		score.addScore(2);
 		assertEquals(3, score.getCurrentScore());
 	}
-
+	
+	@Test
 	public void test2Fail() {
 		matchInn1 = new CricketMatchInning("IND","ENG",5);
 		score = new Scores(matchInn1);
