@@ -54,5 +54,12 @@ public class Scores {
 			}
 		}
 	}
+	
+	public int getScoreInOverInBall(int over,int ball){
+		over-=1;
+		ball-=1;
+		Debuger.Log(match.getOverAt(over).getScoreAtBall(ball)+"");
+		return match.getOverAt(over).getScoreAtBall(ball);
+	}
 
 }
