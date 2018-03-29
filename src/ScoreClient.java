@@ -21,10 +21,12 @@ public class ScoreClient {
 
 		//score.addScore(7);
 		
-		Debuger.Log("Current Over : "+ ( matchInn1.getCurrentOver()+1 ));
-		Debuger.Log("Current Ball : "+matchInn1.getCurrentOverBall());
-		Debuger.Log("Current Over Score "+score.getScoreInOver(matchInn1.getCurrentOver()));
-		Debuger.Log("Total Score : "+score.getCurrentScore());
+//		Debuger.Log("Current Over : "+ ( matchInn1.getCurrentOver()+1 ));
+//		Debuger.Log("Current Ball : "+matchInn1.getCurrentOverBall());
+//		Debuger.Log("Current Over Score "+score.getScoreInOver(matchInn1.getCurrentOver()));
+//		Debuger.Log("Total Score : "+score.getCurrentScore());
+		
+		score.ShowScoreBoard();
 	}
 
 }

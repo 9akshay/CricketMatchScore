@@ -18,7 +18,7 @@ public class CricketMatchInning {
 		}
 	}
 	
-	public int getOvers() {
+	public int getTotalOvers() {
 		return totalOvers;
 	}
 	
