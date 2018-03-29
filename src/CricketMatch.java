@@ -13,6 +13,9 @@ public class CricketMatch {
 		team2 = t2;
 		totalOvers = o;
 		overs = new Over[totalOvers];
+		for(int i=0; i<totalOvers; i++){
+			overs[i]= new Over();
+		}
 	}
 	
 	public int getOvers() {
@@ -34,7 +37,9 @@ public class CricketMatch {
 		int s=0;
 		if(currentOver<totalOvers){
 			overs[currentOver].addScore(score);
-			currentOver++;
+			if(overs[currentOver].getCurrentBall()==6){
+				currentOver++;
+			}
 			s=score;
 		}
 		return s;
@@ -42,5 +47,9 @@ public class CricketMatch {
 	
 	public int getCurrentOver() {
 		return currentOver;
+	}
+	
+	public int getCurrentOverBall() {
+		return overs[currentOver].getCurrentBall();
 	}
 }
