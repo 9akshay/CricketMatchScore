@@ -1,5 +1,5 @@
 
-public class CricketMatch {
+public class CricketMatchInning {
 	
 	private String team1, team2;
 	private int totalOvers = 0;
@@ -8,7 +8,7 @@ public class CricketMatch {
 	private Over[] overs;
 	
 	
-	public CricketMatch(String t1, String t2, int o) {
+	public CricketMatchInning(String t1, String t2, int o) {
 		team1 = t1;
 		team2 = t2;
 		totalOvers = o;

@@ -1,14 +1,15 @@
 
 public class Scores {
 	
-	private CricketMatch match;
+	private CricketMatchInning match;
 	private int totalScore=0;
 
-	public Scores(CricketMatch m) {
+	public Scores(CricketMatchInning m) {
 		match = m;
 	}
 
 	public void addScore(int score) {
+		if(score<=6 && score>=0)
 		totalScore += match.addScore(score);
 	}
 	
