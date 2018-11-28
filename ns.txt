@@ -621,6 +621,34 @@ Result--> popup will be shown of the given message in the script tag
 
 
 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+end
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+generate keys:
+
+openssl genrsa -aes256 -passout stdin -out my_rsa.key
+
+openssl rsa -in my_rsa.key -out my_pub.key -pubout
+
+session key:
+
+openssl rand -out sec.key 32
+
+sessionkey enc using public key:
+
+openssl rsautl -in sec.key -out enc_sec.key -encrypt -inkey my_pub.key -pubin
+
+openssl enc -aes-256-cbc -in file.txt -out enc_file.txt -e -pass file:sec.key 
+
+enc -aes-256-cbc -in enc_file.txt -out dec_file.txt -d -pass file:sec.key
+
+openssl dgst -sha256 -sign my_rsa.key -out file_signature.sign file.txt
+
+openssl dgst -verify my_pub.key -signature file_signature.sign file.txt 
+
 	
 
 
